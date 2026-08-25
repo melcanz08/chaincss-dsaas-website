@@ -36,7 +36,7 @@ export function Playground() {
     try {
       const tokens = JSON.parse(tokensInput);
       
-      const response = await fetch('http://localhost:3000/api/full-compile', {
+      const response = await fetch('https://chaincss-dsaas.onrender.com/api/full-compile', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
