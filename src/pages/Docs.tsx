@@ -1,5 +1,3 @@
-// src/pages/Docs.tsx
-
 import { useState } from 'react';
 
 const docsSections = [
