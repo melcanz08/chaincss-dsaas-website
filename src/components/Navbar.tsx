@@ -1,9 +1,8 @@
 // src/components/Navbar.tsx
 import { Link, useLocation } from 'react-router-dom';
-import { useState } from 'react';
+// Remove useState import since we're not using it
 
 export function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
   const isActive = (path: string) => location.pathname === path;
@@ -49,7 +48,6 @@ export function Navbar() {
               ...navLinkStyle,
               color: isActive('/docs') ? '#f1f5f9' : '#94a3b8',
               fontWeight: isActive('/docs') ? 600 : 500,
-              position: 'relative',
             }}
             onMouseEnter={(e) => e.currentTarget.style.color = '#f1f5f9'}
             onMouseLeave={(e) => e.currentTarget.style.color = isActive('/docs') ? '#f1f5f9' : '#94a3b8'}
